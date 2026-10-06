@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+      - name: setup
+        run: make setup
+      - name: lint
+        run: make lint
+      - name: test
+        run: make test
+      - name: research
+        run: make research
+      - name: demo
+        run: make demo

@@ -1,0 +1,51 @@
+{
+  "duckdb_n_comfort_care": 1,
+  "duckdb_n_patients": 50,
+  "excluded_ids": [
+    "P004"
+  ],
+  "gold_source": "Synthetic seeded cohort (seed 0). MIMIC-IV incidence is unmeasured until a credentialed extract is run.",
+  "horizons_hours": [
+    6,
+    12,
+    24
+  ],
+  "labels": {
+    "antipsychotic": {
+      "horizon_prevalence": {
+        "12": 0.061224489795918366,
+        "24": 0.14285714285714285,
+        "6": 0.0
+      },
+      "median_hours_to_event": 31.34991409,
+      "n_positive": 21,
+      "n_with_timing": 21,
+      "prevalence": 0.42857142857142855
+    },
+    "cam_icu": {
+      "horizon_prevalence": {
+        "12": 0.02040816326530612,
+        "24": 0.1836734693877551,
+        "6": 0.02040816326530612
+      },
+      "median_hours_to_event": 28.87434226611111,
+      "n_positive": 24,
+      "n_with_timing": 24,
+      "prevalence": 0.4897959183673469
+    },
+    "restraint": {
+      "horizon_prevalence": {
+        "12": 0.04081632653061224,
+        "24": 0.12244897959183673,
+        "6": 0.0
+      },
+      "median_hours_to_event": 28.48979677333333,
+      "n_positive": 18,
+      "n_with_timing": 18,
+      "prevalence": 0.3673469387755102
+    }
+  },
+  "n_excluded": 1,
+  "n_included": 49,
+  "n_raw": 50
+}

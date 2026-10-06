@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "case": "P005 committed post-cutoff heart_rate",
+      "exit_if_used": "would be non-zero",
+      "feature": "heart_rate",
+      "rejected": true,
+      "subject_id": "P005",
+      "timestamp": "2024-01-07T06:00:00",
+      "used_count": 0
+    },
+    {
+      "case": "P001 injected post-cutoff lactate",
+      "exit_if_used": "would be non-zero",
+      "feature": "injected_post_cutoff_lactate",
+      "rejected": true,
+      "subject_id": "P001",
+      "timestamp": "2024-01-03T06:00:00",
+      "used_count": 0
+    }
+  ],
+  "gold_source": "Synthetic P005 plus an injected P001 event. Not MIMIC-IV.",
+  "n_rejected_on_p005": 4,
+  "n_used_on_p005": 4,
+  "nonzero_exit_when_leakage_present": true,
+  "notes_ablation_loses_p003": true,
+  "offending_feature": "heart_rate",
+  "offending_subject": "P005",
+  "offending_timestamp": "2024-01-07T06:00:00",
+  "p003_notes_ablated_signal": false,
+  "p003_notes_signal": true,
+  "p005_cutoff_hours": 24.0,
+  "pipeline_rejected_leakage": true
+}

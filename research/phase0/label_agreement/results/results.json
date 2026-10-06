@@ -1,0 +1,49 @@
+{
+  "decision": "Label choice dominates downstream results. Mean pairwise kappa is -0.050 (< 0.60). Phase 2 must treat the three definitions as competing endpoints, not pick a silent primary.",
+  "gold_source": "Synthetic seeded cohort (seed 0). Not MIMIC-IV. Replacing this measurement with credentialed MIMIC-IV CAM-ICU / med / restraint extracts is the measurement that would retire that limitation.",
+  "kappa_threshold": 0.6,
+  "label_choice_dominates": true,
+  "mean_kappa": -0.05033318283781124,
+  "n_included": 49,
+  "n_raw": 50,
+  "pairs": [
+    {
+      "both_positive": 10,
+      "kappa": -0.0233918128654972,
+      "left": "cam_icu",
+      "left_only": 14,
+      "n": 49,
+      "neither": 14,
+      "percent_agreement": 0.4897959183673469,
+      "right": "antipsychotic",
+      "right_only": 11
+    },
+    {
+      "both_positive": 8,
+      "kappa": -0.06700167504187596,
+      "left": "cam_icu",
+      "left_only": 16,
+      "n": 49,
+      "neither": 15,
+      "percent_agreement": 0.46938775510204084,
+      "right": "restraint",
+      "right_only": 10
+    },
+    {
+      "both_positive": 7,
+      "kappa": -0.06060606060606057,
+      "left": "antipsychotic",
+      "left_only": 14,
+      "n": 49,
+      "neither": 17,
+      "percent_agreement": 0.4897959183673469,
+      "right": "restraint",
+      "right_only": 11
+    }
+  ],
+  "positives": {
+    "antipsychotic": 21,
+    "cam_icu": 24,
+    "restraint": 18
+  }
+}

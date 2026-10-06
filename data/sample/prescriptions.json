@@ -1,0 +1,227 @@
+[
+  {
+    "subject_id": "P001",
+    "stay_id": "S001",
+    "starttime": "2024-01-03T14:00:00",
+    "drug": "haloperidol",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P002",
+    "stay_id": "S002",
+    "starttime": "2024-01-03T04:00:00",
+    "drug": "diphenhydramine",
+    "drug_class": "antihistamine",
+    "acb_score": 3,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P002",
+    "stay_id": "S002",
+    "starttime": "2024-01-03T06:00:00",
+    "drug": "oxybutynin",
+    "drug_class": "antimuscarinic",
+    "acb_score": 3,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P002",
+    "stay_id": "S002",
+    "starttime": "2024-01-03T10:00:00",
+    "drug": "amitriptyline",
+    "drug_class": "antidepressant",
+    "acb_score": 3,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P002",
+    "stay_id": "S002",
+    "starttime": "2024-01-03T14:00:00",
+    "drug": "atropine",
+    "drug_class": "antimuscarinic",
+    "acb_score": 3,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P005",
+    "stay_id": "S005",
+    "starttime": "2024-01-07T18:00:00",
+    "drug": "quetiapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P016",
+    "stay_id": "S016",
+    "starttime": "2024-01-17T10:59:32.742906",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P017",
+    "stay_id": "S017",
+    "starttime": "2024-01-18T09:39:55.021673",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P018",
+    "stay_id": "S018",
+    "starttime": "2024-01-19T13:34:32.351312",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P019",
+    "stay_id": "S019",
+    "starttime": "2024-01-21T09:08:56.250140",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P020",
+    "stay_id": "S020",
+    "starttime": "2024-01-22T09:58:22.483810",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P021",
+    "stay_id": "S021",
+    "starttime": "2024-01-22T15:25:12.249880",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P022",
+    "stay_id": "S022",
+    "starttime": "2024-01-24T08:24:35.334522",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P023",
+    "stay_id": "S023",
+    "starttime": "2024-01-25T01:27:27.965084",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P031",
+    "stay_id": "S031",
+    "starttime": "2024-02-02T07:52:37.303656",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P032",
+    "stay_id": "S032",
+    "starttime": "2024-02-02T07:34:30.533820",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P033",
+    "stay_id": "S033",
+    "starttime": "2024-02-04T11:15:50.156096",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P034",
+    "stay_id": "S034",
+    "starttime": "2024-02-05T13:32:45.353761",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P035",
+    "stay_id": "S035",
+    "starttime": "2024-02-06T05:52:17.960660",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P040",
+    "stay_id": "S040",
+    "starttime": "2024-02-11T07:20:59.690724",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P041",
+    "stay_id": "S041",
+    "starttime": "2024-02-12T15:09:21.999018",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P042",
+    "stay_id": "S042",
+    "starttime": "2024-02-12T12:24:11.488180",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P043",
+    "stay_id": "S043",
+    "starttime": "2024-02-14T04:43:33.804611",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P044",
+    "stay_id": "S044",
+    "starttime": "2024-02-14T22:43:44.623674",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  },
+  {
+    "subject_id": "P045",
+    "stay_id": "S045",
+    "starttime": "2024-02-16T10:03:38.328121",
+    "drug": "olanzapine",
+    "drug_class": "antipsychotic",
+    "acb_score": 1,
+    "route": "IV"
+  }
+]

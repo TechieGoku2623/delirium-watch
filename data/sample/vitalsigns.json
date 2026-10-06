@@ -1,0 +1,408 @@
+[
+  {
+    "subject_id": "P001",
+    "stay_id": "S001",
+    "charttime": "2024-01-02T08:00:00",
+    "name": "heart_rate",
+    "value": 88.0
+  },
+  {
+    "subject_id": "P001",
+    "stay_id": "S001",
+    "charttime": "2024-01-02T16:00:00",
+    "name": "heart_rate",
+    "value": 102.0
+  },
+  {
+    "subject_id": "P001",
+    "stay_id": "S001",
+    "charttime": "2024-01-02T22:00:00",
+    "name": "heart_rate",
+    "value": 118.0
+  },
+  {
+    "subject_id": "P001",
+    "stay_id": "S001",
+    "charttime": "2024-01-02T22:00:00",
+    "name": "map",
+    "value": 68.0
+  },
+  {
+    "subject_id": "P001",
+    "stay_id": "S001",
+    "charttime": "2024-01-02T22:00:00",
+    "name": "temp_c",
+    "value": 38.1
+  },
+  {
+    "subject_id": "P002",
+    "stay_id": "S002",
+    "charttime": "2024-01-03T08:00:00",
+    "name": "heart_rate",
+    "value": 72.0
+  },
+  {
+    "subject_id": "P002",
+    "stay_id": "S002",
+    "charttime": "2024-01-03T20:00:00",
+    "name": "heart_rate",
+    "value": 74.0
+  },
+  {
+    "subject_id": "P003",
+    "stay_id": "S003",
+    "charttime": "2024-01-04T10:00:00",
+    "name": "heart_rate",
+    "value": 80.0
+  },
+  {
+    "subject_id": "P003",
+    "stay_id": "S003",
+    "charttime": "2024-01-04T18:00:00",
+    "name": "heart_rate",
+    "value": 84.0
+  },
+  {
+    "subject_id": "P004",
+    "stay_id": "S004",
+    "charttime": "2024-01-05T04:00:00",
+    "name": "heart_rate",
+    "value": 60.0
+  },
+  {
+    "subject_id": "P005",
+    "stay_id": "S005",
+    "charttime": "2024-01-06T08:00:00",
+    "name": "heart_rate",
+    "value": 78.0
+  },
+  {
+    "subject_id": "P005",
+    "stay_id": "S005",
+    "charttime": "2024-01-06T20:00:00",
+    "name": "heart_rate",
+    "value": 82.0
+  },
+  {
+    "subject_id": "P005",
+    "stay_id": "S005",
+    "charttime": "2024-01-07T06:00:00",
+    "name": "heart_rate",
+    "value": 142.0
+  },
+  {
+    "subject_id": "P006",
+    "stay_id": "S006",
+    "charttime": "2024-01-07T06:00:00",
+    "name": "heart_rate",
+    "value": 81.0
+  },
+  {
+    "subject_id": "P007",
+    "stay_id": "S007",
+    "charttime": "2024-01-08T06:00:00",
+    "name": "heart_rate",
+    "value": 94.0
+  },
+  {
+    "subject_id": "P008",
+    "stay_id": "S008",
+    "charttime": "2024-01-09T06:00:00",
+    "name": "heart_rate",
+    "value": 84.0
+  },
+  {
+    "subject_id": "P009",
+    "stay_id": "S009",
+    "charttime": "2024-01-10T06:00:00",
+    "name": "heart_rate",
+    "value": 67.0
+  },
+  {
+    "subject_id": "P010",
+    "stay_id": "S010",
+    "charttime": "2024-01-11T06:00:00",
+    "name": "heart_rate",
+    "value": 76.0
+  },
+  {
+    "subject_id": "P011",
+    "stay_id": "S011",
+    "charttime": "2024-01-12T06:00:00",
+    "name": "heart_rate",
+    "value": 92.0
+  },
+  {
+    "subject_id": "P012",
+    "stay_id": "S012",
+    "charttime": "2024-01-13T06:00:00",
+    "name": "heart_rate",
+    "value": 77.0
+  },
+  {
+    "subject_id": "P013",
+    "stay_id": "S013",
+    "charttime": "2024-01-14T06:00:00",
+    "name": "heart_rate",
+    "value": 75.0
+  },
+  {
+    "subject_id": "P014",
+    "stay_id": "S014",
+    "charttime": "2024-01-15T06:00:00",
+    "name": "heart_rate",
+    "value": 72.0
+  },
+  {
+    "subject_id": "P015",
+    "stay_id": "S015",
+    "charttime": "2024-01-16T06:00:00",
+    "name": "heart_rate",
+    "value": 75.0
+  },
+  {
+    "subject_id": "P016",
+    "stay_id": "S016",
+    "charttime": "2024-01-17T06:00:00",
+    "name": "heart_rate",
+    "value": 87.0
+  },
+  {
+    "subject_id": "P017",
+    "stay_id": "S017",
+    "charttime": "2024-01-18T06:00:00",
+    "name": "heart_rate",
+    "value": 79.0
+  },
+  {
+    "subject_id": "P018",
+    "stay_id": "S018",
+    "charttime": "2024-01-19T06:00:00",
+    "name": "heart_rate",
+    "value": 70.0
+  },
+  {
+    "subject_id": "P019",
+    "stay_id": "S019",
+    "charttime": "2024-01-20T06:00:00",
+    "name": "heart_rate",
+    "value": 67.0
+  },
+  {
+    "subject_id": "P020",
+    "stay_id": "S020",
+    "charttime": "2024-01-21T06:00:00",
+    "name": "heart_rate",
+    "value": 93.0
+  },
+  {
+    "subject_id": "P021",
+    "stay_id": "S021",
+    "charttime": "2024-01-22T06:00:00",
+    "name": "heart_rate",
+    "value": 90.0
+  },
+  {
+    "subject_id": "P022",
+    "stay_id": "S022",
+    "charttime": "2024-01-23T06:00:00",
+    "name": "heart_rate",
+    "value": 80.0
+  },
+  {
+    "subject_id": "P023",
+    "stay_id": "S023",
+    "charttime": "2024-01-24T06:00:00",
+    "name": "heart_rate",
+    "value": 68.0
+  },
+  {
+    "subject_id": "P024",
+    "stay_id": "S024",
+    "charttime": "2024-01-25T06:00:00",
+    "name": "heart_rate",
+    "value": 88.0
+  },
+  {
+    "subject_id": "P025",
+    "stay_id": "S025",
+    "charttime": "2024-01-26T06:00:00",
+    "name": "heart_rate",
+    "value": 75.0
+  },
+  {
+    "subject_id": "P026",
+    "stay_id": "S026",
+    "charttime": "2024-01-27T06:00:00",
+    "name": "heart_rate",
+    "value": 72.0
+  },
+  {
+    "subject_id": "P027",
+    "stay_id": "S027",
+    "charttime": "2024-01-28T06:00:00",
+    "name": "heart_rate",
+    "value": 71.0
+  },
+  {
+    "subject_id": "P028",
+    "stay_id": "S028",
+    "charttime": "2024-01-29T06:00:00",
+    "name": "heart_rate",
+    "value": 91.0
+  },
+  {
+    "subject_id": "P029",
+    "stay_id": "S029",
+    "charttime": "2024-01-30T06:00:00",
+    "name": "heart_rate",
+    "value": 70.0
+  },
+  {
+    "subject_id": "P030",
+    "stay_id": "S030",
+    "charttime": "2024-01-31T06:00:00",
+    "name": "heart_rate",
+    "value": 65.0
+  },
+  {
+    "subject_id": "P031",
+    "stay_id": "S031",
+    "charttime": "2024-02-01T06:00:00",
+    "name": "heart_rate",
+    "value": 67.0
+  },
+  {
+    "subject_id": "P032",
+    "stay_id": "S032",
+    "charttime": "2024-02-02T06:00:00",
+    "name": "heart_rate",
+    "value": 79.0
+  },
+  {
+    "subject_id": "P033",
+    "stay_id": "S033",
+    "charttime": "2024-02-03T06:00:00",
+    "name": "heart_rate",
+    "value": 93.0
+  },
+  {
+    "subject_id": "P034",
+    "stay_id": "S034",
+    "charttime": "2024-02-04T06:00:00",
+    "name": "heart_rate",
+    "value": 66.0
+  },
+  {
+    "subject_id": "P035",
+    "stay_id": "S035",
+    "charttime": "2024-02-05T06:00:00",
+    "name": "heart_rate",
+    "value": 68.0
+  },
+  {
+    "subject_id": "P036",
+    "stay_id": "S036",
+    "charttime": "2024-02-06T06:00:00",
+    "name": "heart_rate",
+    "value": 78.0
+  },
+  {
+    "subject_id": "P037",
+    "stay_id": "S037",
+    "charttime": "2024-02-07T06:00:00",
+    "name": "heart_rate",
+    "value": 86.0
+  },
+  {
+    "subject_id": "P038",
+    "stay_id": "S038",
+    "charttime": "2024-02-08T06:00:00",
+    "name": "heart_rate",
+    "value": 75.0
+  },
+  {
+    "subject_id": "P039",
+    "stay_id": "S039",
+    "charttime": "2024-02-09T06:00:00",
+    "name": "heart_rate",
+    "value": 95.0
+  },
+  {
+    "subject_id": "P040",
+    "stay_id": "S040",
+    "charttime": "2024-02-10T06:00:00",
+    "name": "heart_rate",
+    "value": 93.0
+  },
+  {
+    "subject_id": "P041",
+    "stay_id": "S041",
+    "charttime": "2024-02-11T06:00:00",
+    "name": "heart_rate",
+    "value": 78.0
+  },
+  {
+    "subject_id": "P042",
+    "stay_id": "S042",
+    "charttime": "2024-02-12T06:00:00",
+    "name": "heart_rate",
+    "value": 75.0
+  },
+  {
+    "subject_id": "P043",
+    "stay_id": "S043",
+    "charttime": "2024-02-13T06:00:00",
+    "name": "heart_rate",
+    "value": 86.0
+  },
+  {
+    "subject_id": "P044",
+    "stay_id": "S044",
+    "charttime": "2024-02-14T06:00:00",
+    "name": "heart_rate",
+    "value": 83.0
+  },
+  {
+    "subject_id": "P045",
+    "stay_id": "S045",
+    "charttime": "2024-02-15T06:00:00",
+    "name": "heart_rate",
+    "value": 73.0
+  },
+  {
+    "subject_id": "P046",
+    "stay_id": "S046",
+    "charttime": "2024-02-16T06:00:00",
+    "name": "heart_rate",
+    "value": 65.0
+  },
+  {
+    "subject_id": "P047",
+    "stay_id": "S047",
+    "charttime": "2024-02-17T06:00:00",
+    "name": "heart_rate",
+    "value": 66.0
+  },
+  {
+    "subject_id": "P048",
+    "stay_id": "S048",
+    "charttime": "2024-02-18T06:00:00",
+    "name": "heart_rate",
+    "value": 85.0
+  },
+  {
+    "subject_id": "P049",
+    "stay_id": "S049",
+    "charttime": "2024-02-19T06:00:00",
+    "name": "heart_rate",
+    "value": 78.0
+  },
+  {
+    "subject_id": "P050",
+    "stay_id": "S050",
+    "charttime": "2024-02-20T06:00:00",
+    "name": "heart_rate",
+    "value": 86.0
+  }
+]

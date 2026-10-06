@@ -1,0 +1,110 @@
+[
+  {
+    "subject_id": "P001",
+    "stay_id": "S001",
+    "starttime": "2024-01-03T13:00:00",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P024",
+    "stay_id": "S024",
+    "starttime": "2024-01-25T15:50:29.466159",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P025",
+    "stay_id": "S025",
+    "starttime": "2024-01-26T22:02:42.883490",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P026",
+    "stay_id": "S026",
+    "starttime": "2024-01-27T06:48:33.705773",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P027",
+    "stay_id": "S027",
+    "starttime": "2024-01-29T05:15:12.732157",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P028",
+    "stay_id": "S028",
+    "starttime": "2024-01-30T20:13:14.397693",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P029",
+    "stay_id": "S029",
+    "starttime": "2024-01-31T09:43:28.319010",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P030",
+    "stay_id": "S030",
+    "starttime": "2024-02-01T02:46:09.899253",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P036",
+    "stay_id": "S036",
+    "starttime": "2024-02-07T17:00:14.119544",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P037",
+    "stay_id": "S037",
+    "starttime": "2024-02-07T15:02:14.303734",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P038",
+    "stay_id": "S038",
+    "starttime": "2024-02-09T10:33:38.320705",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P039",
+    "stay_id": "S039",
+    "starttime": "2024-02-10T00:16:23.099934",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P040",
+    "stay_id": "S040",
+    "starttime": "2024-02-11T06:20:59.690724",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P041",
+    "stay_id": "S041",
+    "starttime": "2024-02-12T14:09:21.999018",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P042",
+    "stay_id": "S042",
+    "starttime": "2024-02-12T11:24:11.488180",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P043",
+    "stay_id": "S043",
+    "starttime": "2024-02-14T03:43:33.804611",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P044",
+    "stay_id": "S044",
+    "starttime": "2024-02-14T21:43:44.623674",
+    "item": "restraint"
+  },
+  {
+    "subject_id": "P045",
+    "stay_id": "S045",
+    "starttime": "2024-02-16T09:03:38.328121",
+    "item": "restraint"
+  }
+]

@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+title: delirium-watch
+message: Research tool. Not a medical device. Not for clinical deployment.
+type: software
+license: MIT
+version: 0.1.0

@@ -1,0 +1,352 @@
+[
+  {
+    "subject_id": "P001",
+    "stay_id": "S001",
+    "charttime": "2024-01-02T18:00:00",
+    "note_type": "nursing",
+    "text": "Restless overnight. Oriented x3. No pulling at lines."
+  },
+  {
+    "subject_id": "P002",
+    "stay_id": "S002",
+    "charttime": "2024-01-03T12:00:00",
+    "note_type": "nursing",
+    "text": "Sleeping in intervals. Oriented x3. Calm."
+  },
+  {
+    "subject_id": "P003",
+    "stay_id": "S003",
+    "charttime": "2024-01-04T18:00:00",
+    "note_type": "nursing",
+    "text": "Night shift: patient oriented x1 only, pulling at Foley, called for deceased spouse. Sundowning. CAM not documented this shift."
+  },
+  {
+    "subject_id": "P004",
+    "stay_id": "S004",
+    "charttime": "2024-01-05T02:00:00",
+    "note_type": "nursing",
+    "text": "Comfort measures only. Family at bedside."
+  },
+  {
+    "subject_id": "P005",
+    "stay_id": "S005",
+    "charttime": "2024-01-06T12:00:00",
+    "note_type": "nursing",
+    "text": "Calm. Oriented x3."
+  },
+  {
+    "subject_id": "P006",
+    "stay_id": "S006",
+    "charttime": "2024-01-07T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P007",
+    "stay_id": "S007",
+    "charttime": "2024-01-08T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P008",
+    "stay_id": "S008",
+    "charttime": "2024-01-09T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P009",
+    "stay_id": "S009",
+    "charttime": "2024-01-10T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P010",
+    "stay_id": "S010",
+    "charttime": "2024-01-11T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P011",
+    "stay_id": "S011",
+    "charttime": "2024-01-12T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P012",
+    "stay_id": "S012",
+    "charttime": "2024-01-13T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P013",
+    "stay_id": "S013",
+    "charttime": "2024-01-14T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P014",
+    "stay_id": "S014",
+    "charttime": "2024-01-15T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P015",
+    "stay_id": "S015",
+    "charttime": "2024-01-16T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P016",
+    "stay_id": "S016",
+    "charttime": "2024-01-17T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P017",
+    "stay_id": "S017",
+    "charttime": "2024-01-18T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P018",
+    "stay_id": "S018",
+    "charttime": "2024-01-19T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P019",
+    "stay_id": "S019",
+    "charttime": "2024-01-20T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P020",
+    "stay_id": "S020",
+    "charttime": "2024-01-21T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P021",
+    "stay_id": "S021",
+    "charttime": "2024-01-22T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P022",
+    "stay_id": "S022",
+    "charttime": "2024-01-23T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P023",
+    "stay_id": "S023",
+    "charttime": "2024-01-24T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P024",
+    "stay_id": "S024",
+    "charttime": "2024-01-25T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P025",
+    "stay_id": "S025",
+    "charttime": "2024-01-26T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P026",
+    "stay_id": "S026",
+    "charttime": "2024-01-27T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P027",
+    "stay_id": "S027",
+    "charttime": "2024-01-28T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P028",
+    "stay_id": "S028",
+    "charttime": "2024-01-29T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P029",
+    "stay_id": "S029",
+    "charttime": "2024-01-30T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P030",
+    "stay_id": "S030",
+    "charttime": "2024-01-31T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P031",
+    "stay_id": "S031",
+    "charttime": "2024-02-01T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P032",
+    "stay_id": "S032",
+    "charttime": "2024-02-02T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P033",
+    "stay_id": "S033",
+    "charttime": "2024-02-03T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P034",
+    "stay_id": "S034",
+    "charttime": "2024-02-04T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P035",
+    "stay_id": "S035",
+    "charttime": "2024-02-05T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P036",
+    "stay_id": "S036",
+    "charttime": "2024-02-06T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P037",
+    "stay_id": "S037",
+    "charttime": "2024-02-07T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P038",
+    "stay_id": "S038",
+    "charttime": "2024-02-08T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P039",
+    "stay_id": "S039",
+    "charttime": "2024-02-09T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P040",
+    "stay_id": "S040",
+    "charttime": "2024-02-10T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P041",
+    "stay_id": "S041",
+    "charttime": "2024-02-11T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P042",
+    "stay_id": "S042",
+    "charttime": "2024-02-12T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P043",
+    "stay_id": "S043",
+    "charttime": "2024-02-13T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P044",
+    "stay_id": "S044",
+    "charttime": "2024-02-14T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P045",
+    "stay_id": "S045",
+    "charttime": "2024-02-15T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P046",
+    "stay_id": "S046",
+    "charttime": "2024-02-16T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P047",
+    "stay_id": "S047",
+    "charttime": "2024-02-17T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P048",
+    "stay_id": "S048",
+    "charttime": "2024-02-18T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P049",
+    "stay_id": "S049",
+    "charttime": "2024-02-19T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  },
+  {
+    "subject_id": "P050",
+    "stay_id": "S050",
+    "charttime": "2024-02-20T10:00:00",
+    "note_type": "nursing",
+    "text": "Routine ICU care. Oriented x3."
+  }
+]
