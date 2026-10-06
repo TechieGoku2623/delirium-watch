@@ -519,6 +519,9 @@ def generate_and_write(sample_dir: Path | None = None, seed: int = SEED) -> Coho
     )
     _dump(dest / "noteevents.json", [e.model_dump(mode="json") for e in cohort.noteevents])
     _dump(dest / "vitalsigns.json", [e.model_dump(mode="json") for e in cohort.vitalsigns])
+    from delirium_watch.parquet_io import write_cohort_parquet
+
+    write_cohort_parquet(cohort, dest / "cohort.parquet")
     return cohort
 
 

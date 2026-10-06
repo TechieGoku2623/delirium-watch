@@ -2,7 +2,7 @@
 
 Multimodal early warning for ICU delirium onset. Retrospective research
 on de-identified or synthetic data. Not for clinical deployment. Not a
-medical device.
+medical device. Not for patient care.
 
 [![ci](https://github.com/techiegoku2623/delirium-watch/actions/workflows/ci.yml/badge.svg)](https://github.com/techiegoku2623/delirium-watch/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
@@ -12,10 +12,10 @@ medical device.
 
 | Phase | Deliverable | Status |
 | --- | --- | --- |
-| 0 | Research memo and harnesses | In review — docs/phase-0/research-memo.md |
-| 1 | Architecture, schemas, data contracts | Not started |
-| 2 | First vertical slice | Not started |
-| 3 | Evaluation and demo | Not started |
+| 0 | Research memo and harnesses | Merged — docs/phase-0/research-memo.md |
+| 1 | Architecture, schemas, data contracts | Merged — docs/ARCHITECTURE.md |
+| 2 | First vertical slice | Merged |
+| 3 | Evaluation and demo | Merged — demo/*.cast |
 
 Status values: Not started / In progress / In review / Merged.
 
@@ -30,97 +30,124 @@ post-cutoff chart time, and they treat nursing notes as optional color.
 
 This repo measures those three problems before it trains a model. It is
 research tooling. It is not a medical device, not a diagnostic, and not
-for clinical deployment. No MIMIC-IV data is committed.
+for patient care. No MIMIC-IV data is committed. Synthetic cohort only.
 
 ## Walkthrough
 
-Phase 0 ships the designed synthetic cohort and the measurement
-harnesses. The `delirium-watch predict` command is reserved for Phase 2;
-running it now is not implemented on purpose.
-
-### Step 1 — designed synthetic cohort
+No credentials. `PATH=$HOME/.local/bin:$PATH`.
 
 ```bash
-make setup && make demo-data && make demo
+make setup && make demo
 ```
 
-`make demo` calls `delirium-watch demo-plan --dry-run`. Actual stdout:
+`make demo` runs `delirium-watch demo`: generate the seeded cohort,
+compare three labels, predict P001 at 12h with stream attribution, and
+show the leakage audit finding. Actual stdout (abridged to the
+commands; wrapping is from the 140-column console):
 
 ```
-delirium-watch designed synthetic patients
+delirium-watch demo  (synthetic only; no credentials)
 
-P001  prodrome_positive
-  path:     clear physiological prodrome then CAM-ICU positive
-  expected: CAM-ICU, antipsychotic, and restraint all fire. Vitals before
-cutoff show the prodrome. Gold onset at 36h.
-
-P002  high_acb_negative
-  path:     high anticholinergic burden, no delirium event
-  expected: All three labels negative. ACB sum is high before cutoff.
-No CAM-ICU, antipsychotic, or restraint events.
-
-P003  notes_only
-  path:     nursing-note signal only; structured labels negative
-  expected: CAM-ICU, antipsychotic, and restraint are all negative.
-notes_signal() is true before cutoff. Gold onset at 20h from notes.
-
-P004  comfort_care
-  path:     comfort care — must be excluded
-  expected: is_excluded() is true. Stay never enters label or base-rate
-numerators.
-
-P005  leakage_probe
-  path:     post-cutoff heart_rate deliberately placed to trip leakage audit
-  expected: leakage_safe_window raises LeakageError naming heart_rate at
-icu_intime+30h. Non-zero exit if that event is ever used.
-
+Wrote 50 synthetic patients to data/sample
+Parquet: data/sample/cohort.parquet
+Included: 49   Excluded (comfort care): 1
+  excluded ids: P004
+label           n+   prevalence
+cam_icu         24   0.490
+antipsychotic   21   0.429
+restraint       18   0.367
+Synthetic only. No MIMIC bytes. Not a population incidence.
 Research tool only. Retrospective analysis on synthetic or de-identified
 data. This is not a medical device, not a diagnostic, and not for
-clinical deployment.
+patient care or clinical deployment.
 ```
 
-The records are designed: a prodrome-positive stay, an ACB false-positive
-pressure case, a notes-only case, a comfort-care exclusion, and a
-leakage probe. See `data/sample/README.md`.
-
-Recordings `demo/01-predict.cast` land in Phase 3.
-
-### Step 2 — leakage-safe window (Phase 0, not a model)
+### Step 1 — seeded cohort and three labels
 
 ```bash
-make research
+make demo-data
+delirium-watch labels compare --cohort data/sample/cohort.parquet
 ```
 
-`research/phase0/leakage_audit/` injects post-cutoff data and confirms
-the pipeline rejects it by feature name and timestamp. This is built
-before any model.
+Actual stdout from `labels compare`:
 
-### Step 3 — label disagreement (Phase 0)
+```
+delirium-watch labels compare
+cohort: data/sample/cohort.parquet
+raw n=50  included n=49  excluded n=1
+prevalence (included): CAM-ICU=0.490  antipsychotic=0.429  restraint=0.367
+pair                         n  both+  left only  right only  neither  agreement  kappa
+cam_icu vs antipsychotic    49     10         14          11       14      0.490 -0.023
+cam_icu vs restraint        49      8         16          10       15      0.469 -0.067
+antipsychotic vs restraint  49      7         14          11       17      0.490 -0.061
+Mean pairwise kappa: -0.050
+Label choice dominates downstream results (mean kappa < 0.60). The three
+definitions stay competing endpoints.
+```
 
-The same `make research` run writes pairwise kappa for CAM-ICU,
-antipsychotic, and restraint labels. If they disagree, label choice
-dominates downstream results.
+Recording: `demo/01-cohort-and-labels.cast`.
 
-### Step 4 — reserved predict, then the measured baseline
+### Step 2 — predict at T, explain three streams
 
 ```bash
-delirium-watch predict --horizon 12
+delirium-watch predict --patient P001 --horizon 12 --explain
+```
+
+Actual stdout:
+
+```
+delirium-watch predict
+patient: P001  role: prodrome_positive
+horizon: 12h  cutoff T: 2024-01-03T00:00:00
+Hard temporal cutoff: features use only events with timestamp <= T.
+latest used timestamp: 2024-01-02 22:00:00
+calibrated P(onset by T+12h): 0.959
+raw logit: 3.622  temperature: 1.15  (Brier is reported by `make eval`, not a raw score)
+stream  contribution  features
+physio        +3.472  hr_last=118.0  hr_delta=30.0  rass=1.0  temp_c=38.1
+meds          +0.000  anticholinergic_burden=0.0
+notes         +1.650  notes_signal=1
+PRE-DELIRIC stand-in (publication formula on synthetic features): 0.117
+  — van den Boogaard et al., BMJ 2012;344:e420 (formula stand-in)
+E-PRE-DELIRIC stand-in (publication formula on synthetic features): 0.247
+  — Wassenaar et al., Intensive Care Med 2015;41:1048–1056 (formula stand-in)
+Research tool only. ... not for patient care or clinical deployment.
+```
+
+Latest used timestamp is before T. Recording: `demo/02-predict-explain.cast`.
+
+### Step 3 — leakage audit (exits non-zero)
+
+```bash
+delirium-watch audit-leakage
+```
+
+The command injects `injected_post_cutoff_lactate` and names the
+committed P005 `heart_rate` probe. It exits 1. Recording:
+`demo/03-leakage-audit.cast`.
+
+### Step 4 — evaluation
+
+```bash
 make eval
 ```
 
-`delirium-watch predict` is reserved (Phase 2). `make eval` already
-runs: it regenerates `docs/EVALUATION.md` from the Phase 0 harnesses.
+Horizon curve, calibration bins, AUPRC, subgroup table, alert-burden,
+and both published-formula stand-ins (PRE-DELIRIC / E-PRE-DELIRIC) on
+synthetic features. Recording: `demo/04-evaluation.cast`.
 
 ## Layout
 
 Read in this order:
 
 1. `docs/phase-0/research-memo.md` — why the defaults and the failure condition
-2. `data/sample/README.md` — why each demo stay exists
-3. `docs/DATA.md` — MIMIC-IV credentialing (weeks); no MIMIC in git
-4. `src/delirium_watch/features.py` — the leakage-safe window
-5. `research/phase0/` — the three measurements behind the memo
-6. `src/delirium_watch/cli.py` — demo-plan and demo-data only, until Phase 2
+2. `docs/ARCHITECTURE.md` — data contracts and the three streams
+3. `data/sample/README.md` — why each demo stay exists
+4. `docs/DATA.md` — MIMIC-IV credentialing (weeks); no MIMIC in git
+5. `src/delirium_watch/features.py` — the leakage-safe window
+6. `src/delirium_watch/model.py` — calibrated logistic + attribution
+7. `src/delirium_watch/baselines.py` — PRE-DELIRIC / E-PRE-DELIRIC stand-ins
+8. `research/phase0/` and `research/phase3/eval/` — measurements
 
 ## Results
 
@@ -134,7 +161,11 @@ Regenerated by `make eval`. Baseline column is mandatory.
 | CAM-ICU prevalence (included) | 0.490 | 49 | Synthetic; not MIMIC-IV |
 | Comfort-care excluded | 1 | 50 | P004 |
 | Leakage rejected | heart_rate @ 2024-01-07T06:00:00 | P005 | Non-zero exit if used |
-| AUPRC / Brier / alert-burden | Phase 2 | — | Declared, not measured |
+| 12h AUPRC (CAM-ICU, model) | 0.338 | 40 | Synthetic; not MIMIC-IV |
+| 12h Brier (model) | 0.205 | 40 | Temperature-scaled logistic |
+| 12h PRE-DELIRIC AUPRC (stand-in) | 0.291 | 40 | Publication formula on synthetic features |
+| 12h E-PRE-DELIRIC AUPRC (stand-in) | 0.320 | 40 | Publication formula on synthetic features |
+| Alert-burden @ 0.20 | 8.4/100-pt-days | 17 alerts | PPV 0.176 |
 
 <!-- EVAL_TABLE_END -->
 
@@ -143,14 +174,17 @@ Regenerated by `make eval`. Baseline column is mandatory.
 ```mermaid
 flowchart LR
     events[TimedEvent list] --> window[leakage_safe_window]
-    window -->|timestamp <= cutoff| used[used features]
-    window -->|timestamp > cutoff| reject[LeakageError name + time]
-    used --> labels[CAM-ICU / antipsychotic / restraint]
-    labels --> memo[Phase 0 harnesses]
-    subgraph later [Phase 2, not built]
-      model[12h forecast]
-    end
-    used -.-> model
+    window -->|timestamp <= T| used[used features]
+    window -->|timestamp > T| reject[LeakageError name + time]
+    used --> physio[physio]
+    used --> meds[meds]
+    used --> notes[notes]
+    physio --> model[temperature-scaled logistic]
+    meds --> model
+    notes --> model
+    model --> p[calibrated P]
+    p --> eval[AUPRC Brier alert-burden]
+    pre[PRE-DELIRIC / E-PRE-DELIRIC stand-ins] --> eval
 ```
 
 `TimedEvent` is the data that moves. Post-cutoff events never enter
@@ -163,8 +197,8 @@ flowchart LR
 | Three competing labels, no silent primary | A single "delirium" bit | A credentialed MIMIC extract with mean kappa ≥ 0.60 |
 | Horizon as a 6/12/24h parameter | One undeclared window | Phase 3 calibration collapsing at 6h |
 | Tested leakage-safe window | Notebook `WHERE charttime <= t` | A single used event with timestamp > t |
-| Synthetic seeded cohort | Live MIMIC-IV in Phase 0 | Credentialing complete + extract committed as a manifest |
-| Lexical note tokens | An embedding model | Notes-ablation still loses P003 after a model is added |
+| Synthetic seeded cohort | Live MIMIC-IV | Credentialing complete + extract committed as a manifest |
+| Publication-formula stand-ins | A port of the bedside calculators | A credentialed extract with the original variables |
 
 ## 🛡️ Edge Cases & Failure Modes
 
@@ -176,17 +210,20 @@ flowchart LR
 - Copied-forward CAM-ICU after cutoff is leakage, not a label.
 - Antipsychotics for primary psychiatric disease stay in the AP label;
   we do not silently recode indication.
-- Real MIMIC notes can contain residual identifiers; Phase 0 never
+- Real MIMIC notes can contain residual identifiers; this repo never
   touches them.
 
 ## Limitations
 
-This is not a bedside monitor. It does not replace CAM-ICU. Phase 0
-classifies designed synthetic stays, not patients. MIMIC-IV incidence is
-unmeasured. No model is fitted. No demo recording is committed.
+This is not a bedside monitor and not for patient care. It does not
+replace CAM-ICU. Numbers are synthetic. MIMIC-IV incidence is
+unmeasured. PRE-DELIRIC / E-PRE-DELIRIC here are publication formulas
+on synthetic stand-in features, not validated ports.
 
 ## License and citation
 
-MIT. Cite Ely et al. on CAM-ICU, the MIMIC-IV PhysioNet release for any
-later credentialed extract, and this repository for the harnesses.
-Do not cite the synthetic base rates as clinical incidence.
+MIT. Cite Ely et al. on CAM-ICU, van den Boogaard et al. BMJ 2012 and
+Wassenaar et al. Intensive Care Med 2015 for the stand-in formulas,
+the MIMIC-IV PhysioNet release for any later credentialed extract, and
+this repository for the harnesses. Do not cite the synthetic base rates
+as clinical incidence.

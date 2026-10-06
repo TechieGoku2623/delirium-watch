@@ -215,13 +215,13 @@ This project will not claim clinical impact in Phase 0–3.
 
 | Phase | Deliverable | Status |
 | --- | --- | --- |
-| 0 | Research memo and harnesses | In review — docs/phase-0/research-memo.md |
-| 1 | Architecture, schemas, data contracts | Not started |
-| 2 | First vertical slice (leakage-safe features, 12h model, notes ablation) | Not started |
-| 3 | Evaluation on credentialed MIMIC, demo recordings | Not started |
+| 0 | Research memo and harnesses | Merged — docs/phase-0/research-memo.md |
+| 1 | Architecture, schemas, data contracts | Merged — docs/ARCHITECTURE.md |
+| 2 | First vertical slice (leakage-safe features, 12h model, notes ablation) | Merged |
+| 3 | Evaluation on synthetic hold-in, demo recordings | Merged — demo/*.cast |
 
-Phase 0 does not include a fitted model, a FastAPI service, or asciinema
-recordings. Those start after this memo is reviewed.
+Phase 1–3 extend this memo. Credentialed MIMIC remains unmeasured.
+The vertical slice is synthetic only and is not for patient care.
 
 ### Highest-risk technical unknowns going into Phase 1
 

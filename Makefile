@@ -16,19 +16,21 @@ test:
 
 research:
 	$(UV) run python research/phase0/run_all.py
+	$(UV) run python research/phase3/eval/run.py
+	$(UV) run python research/phase0/render_docs.py
 
 eval:
 	$(UV) run python research/phase0/label_agreement/run.py
 	$(UV) run python research/phase0/base_rate/run.py
 	$(UV) run python research/phase0/leakage_audit/run.py
+	$(UV) run python research/phase3/eval/run.py
 	$(UV) run python research/phase0/render_docs.py
 
 demo:
-	$(UV) run delirium-watch demo-plan --dry-run
+	$(UV) run delirium-watch demo
 
 demo-data:
 	$(UV) run delirium-watch demo-data
 
 record:
-	@echo "Asciinema recordings are a Phase 3 deliverable (demo/*.cast)."
-	@echo "Phase 0 has no predict CLI to record."
+	$(UV) run python scripts/record_demo.py

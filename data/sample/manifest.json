@@ -1,5 +1,5 @@
 {
-  "disclaimer": "Research tool only. Retrospective analysis on synthetic or de-identified data. This is not a medical device, not a diagnostic, and not for clinical deployment.",
+  "disclaimer": "Research tool only. Retrospective analysis on synthetic or de-identified data. This is not a medical device, not a diagnostic, and not for patient care or clinical deployment.",
   "synthetic": true,
   "seed": 0,
   "n_patients": 50,
