@@ -1,7 +1,7 @@
 export PATH := $(HOME)/.local/bin:$(PATH)
 UV ?= uv
 
-.PHONY: setup lint test research eval demo demo-data record
+.PHONY: demo-shots setup lint test research eval demo demo-data record
 
 setup:
 	$(UV) sync --extra dev
@@ -32,5 +32,9 @@ demo:
 demo-data:
 	$(UV) run delirium-watch demo-data
 
+demo-shots:
+	$(UV) run --with pyyaml python demo/verify_shots.py
+
 record:
-	$(UV) run python scripts/record_demo.py
+	bash demo/record.sh
+	bash demo/render.sh

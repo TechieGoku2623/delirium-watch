@@ -8,6 +8,11 @@ medical device. Not for patient care.
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+
+![delirium-watch demo](demo/out/delirium-watch-demo.gif)
+
+Regenerable terminal video: `make record`. [Full mp4](demo/out/delirium-watch-demo.mp4). Per-shot loops live in `demo/out/`. See `demo/README.md`.
+
 ## Status
 
 | Phase | Deliverable | Status |

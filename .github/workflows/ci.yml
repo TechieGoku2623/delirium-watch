@@ -23,3 +23,5 @@ jobs:
         run: make research
       - name: demo
         run: make demo
+      - name: demo-shots
+        run: make demo-shots

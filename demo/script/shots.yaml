@@ -1,0 +1,40 @@
+title: delirium-watch
+tagline: Multimodal early warning for ICU delirium onset
+problem:
+  - This runs on a synthetic cohort — these are not real patients.
+  - Delirium is common in the ICU and underdiagnosed.
+  - Sepsis has hundreds of public models. Delirium has almost none.
+shots:
+  - id: 01-demo-data
+    command: delirium-watch demo-data
+    caption: Seeded synthetic cohort — reproducible without credentialing
+    hold: 3.0
+    highlight: "synthetic|seed"
+    failure_beat: false
+  - id: 02-labels
+    command: delirium-watch labels compare --cohort data/sample/cohort.parquet
+    caption: Three label definitions disagree — the label moves results more than the model
+    hold: 4.5
+    highlight: "kappa|agreement"
+    failure_beat: false
+  - id: 03-predict
+    command: delirium-watch predict --patient P001 --horizon 12 --explain
+    caption: Calibrated probability with attribution across all three streams
+    hold: 4.0
+    highlight: "calibrated|Attribution"
+    failure_beat: false
+  - id: 04-leakage
+    command: delirium-watch audit-leakage
+    caption: Injected post-cutoff data detected — run fails, exit 1
+    hold: 4.5
+    highlight: "OFFENDING FEATURE|FAIL"
+    failure_beat: true
+    expect_exit: 1
+results:
+  command: delirium-watch eval --summary
+  caption: Alert burden per shift decides deployability — AUROC alone does not
+  hold: 6.0
+end_card:
+  url: github.com/techiegoku2623/delirium-watch
+  license: MIT
+gif_beat: 04-leakage

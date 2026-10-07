@@ -25,7 +25,7 @@ from delirium_watch.schemas import LabelName
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 labels_app = typer.Typer(no_args_is_help=True, add_completion=False)
 app.add_typer(labels_app, name="labels")
-console = Console(width=140)
+console = Console(width=100)
 
 
 @app.callback()
@@ -295,12 +295,29 @@ def audit_leakage(
 @app.command("eval")
 def eval_cmd(
     sample_dir: Path | None = typer.Option(None, "--sample-dir"),
+    summary: bool = typer.Option(False, "--summary", help="Alert-burden table only"),
 ) -> None:
     """Horizon curve, calibration, AUPRC, subgroups, alert-burden, both baselines."""
 
     cohort = load_cohort(sample_dir)
     payload = evaluate_cohort(cohort)
-    console.print(format_eval_text(payload))
+    if summary:
+        console.print("delirium-watch eval  (synthetic cohort only)")
+        console.print(str(payload["disclaimer"])[:100])
+        h12 = next(row for row in payload["horizon_curve"] if int(row["horizon_hours"]) == 12)
+        model = h12["model"]
+        console.print(
+            f"12h model AUPRC {float(model['auprc']):.3f}  Brier {float(model['brier']):.3f}"
+        )
+        console.print("Alert-burden (12h) — deployability is here, not AUROC")
+        for row in payload["alert_burden_12h"][:4]:
+            console.print(
+                f"  threshold={row['threshold']:.2f}  alerts={int(row['n_alert'])}  "
+                f"PPV={row['ppv']:.3f}  alarms/100-pt-days="
+                f"{row['alarms_per_100_patient_days']:.2f}"
+            )
+    else:
+        console.print(format_eval_text(payload))
     _print_disclaimer()
 
 
